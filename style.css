@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+.hide {
+  position: absolute;
+  left: -9999px;
+}
+
+body {
+  background-color: whitesmoke;
+  display: grid;
+  place-content: center;
+  font-size: 1.2rem;
+}
+
+main {
+  max-width: 100vw;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  gap: 1rem;
+}
+
+.HEADER__INTRO,
+.HOBBIES,
+.ASPIRATION {
+  background-color: aquamarine;
+  padding: 1rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+}
+
+.HEADER__INTRO {
+  width: auto;
+  display: grid;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.HEADER__IMG img {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+h2 {
+    font-size: 1.5rem;
+  }
+
+ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 765px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  main {
+    max-width: 65vw;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .HEADER__INTRO {
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 2;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .HOBBIES,
+  .ASPIRATION {
+    grid-column: span 1;
+  }
+}
